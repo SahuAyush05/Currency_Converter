@@ -18,7 +18,7 @@ const Convert = () => {
       const fetchCurrencies = async () => {
         try {
           const response = await axios.get(
-            "https://api.forexrateapi.com/v1/symbols?api_key=90f26e1626d76610c029e6e93c33d7a6"
+            "https://api.forexrateapi.com/v1/symbols?api_key=f9021f8c867b9a982a85bcf2159c2a7f"
           );
           const currencyCodes = Object.keys(response.data.symbols);
           // console.log(currencyCodes);
@@ -40,7 +40,7 @@ const Convert = () => {
       if (fromCurrency !== "" && toCurrency !== "") {
         try {
           const response = await axios.get(
-            `https://api.forexrateapi.com/v1/convert?api_key=90f26e1626d76610c029e6e93c33d7a6&from=${fromCurrency}&to=${toCurrency}&amount=${amount}`
+            `https://api.forexrateapi.com/v1/convert?api_key=f9021f8c867b9a982a85bcf2159c2a7f&from=${fromCurrency}&to=${toCurrency}&amount=${amount}`
           );
           console.log(response);
           const convertedRate = response.data.result;
